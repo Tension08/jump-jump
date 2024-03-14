@@ -15,7 +15,7 @@
 
 // Colors
 namespace Colors {
-  const SDL_Color BLACK = { 0, 0, 0, SDL_ALPHA_OPAQUE };
+  const SDL_Color ORANGE = { 255, 165, 0, SDL_ALPHA_OPAQUE };
   const SDL_Color GREEN = { 0, 255, 0, SDL_ALPHA_OPAQUE };
 }
 
@@ -83,7 +83,7 @@ bool InitSDL()
 
 void ClearScreen(SDL_Renderer* renderer)
 {
-  SDL_SetRenderDrawColor(renderer, Colors::BLACK.r, Colors::BLACK.g, Colors::BLACK.b, Colors::BLACK.a);
+  SDL_SetRenderDrawColor(renderer, Colors::ORANGE.r, Colors::ORANGE.g, Colors::ORANGE.b, Colors::ORANGE.a);
   SDL_RenderClear(renderer);
 }
 
