@@ -4,6 +4,7 @@
 #include "showBar.h"
 #include "TextObject.h"
 
+TTF_Font* font = NULL;
 bool init() 
 {
     bool success = true;
@@ -43,9 +44,7 @@ bool init()
             if (TTF_Init() == -1) success = false;
             else 
             {
-                font_time = TTF_OpenFont("value/Planes_ValMore.ttf",15);
                 font = TTF_OpenFont("value/Plane_ValMore.ttf", 30);
-                if(font_time == NULL) success = false;
             }
         }
     }
@@ -305,7 +304,7 @@ int main (int argc, char* args[])
             Uint32 time_val = SDL_GetTicks()/1000;
             str_mark += std::to_string(time_val * PLAYER_SPEED);
             mark_game.SetText(str_mark);
-            mark_game.LoadFromRenderText(font_time, gscreen);
+            mark_game.LoadFromRenderText(font, gscreen);
             mark_game.RenderText(gscreen, WINDOW_WIDTH/2,0);
             
             gamemap.SetMap(map_data);

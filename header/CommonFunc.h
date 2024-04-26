@@ -14,8 +14,6 @@ static SDL_Event e;
 const int WINDOW_WIDTH = 960;
 const int WINDOW_HEIGHT = 480;
 const int FRAME_PER_SECOND = 60;
-TTF_Font* font_time = NULL;
-TTF_Font* font = NULL;
 
 const int CHAR_FRAMES = 8;
 
