@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/mac/sdl2-starter/build/debug",
+            "binaryPath": "/Users/mac/sdl2-starter/build/debug/play",
+            "binaryArgs": []
+        }
+    ]
+}
