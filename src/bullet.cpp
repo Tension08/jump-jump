@@ -30,7 +30,7 @@ void BulletObject::HandleMove(const int& x_border, const int& y_border){
 bool BulletObject::LoadImgBullet(SDL_Renderer* des){
     bool ret = false;
     if (bullet_type_ == ROCK){
-        ret = LoadImg("value/rock.png", des);
+        ret = LoadImg("value/bullet.png", des);
     }
     else if(bullet_type_ == MAGIC){
         ret = LoadImg("value/magic.png", des);

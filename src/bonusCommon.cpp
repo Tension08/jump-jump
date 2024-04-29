@@ -155,12 +155,13 @@ int SDLCommonFunc::showCharacterMenu(SDL_Renderer* screen)
           {
             check = 1;
             ret = false;
-
+            break;
           }
           case SDLK_2:
           {
             check =  2;
             ret = false;
+            break;
           }
         }
       }

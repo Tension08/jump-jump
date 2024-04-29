@@ -8,7 +8,7 @@
 class ThreatsObject : public BaseObject{
     public:
         ThreatsObject();
-        ~ThreatsObject();
+        virtual ~ThreatsObject();
 
         enum TypeMove{
             STATIC_THREAT = 0,

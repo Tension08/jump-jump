@@ -31,24 +31,28 @@ int SDLCommonFunc::showMenu(SDL_Renderer* screen, int& remaindertime_menu)
 				{
 					menu_running = false;
 					check = 1;
+					menu_bg.free();
 				}
 
 				if (mouseX >= 409 && mouseX <= 558 && mouseY >= 284 && mouseY <= 317)
 				{
 					menu_running = false;
                     check = 2;
+					menu_bg.free();
 				}
 
 				if (mouseX >= 410 && mouseX <= 558 && mouseY >= 345 && mouseY <= 379)
 				{
 					menu_running = false;
 					check = 3;
+					menu_bg.free();
 				}
 
                 if (mouseX >= 452 && mouseX <= 514 && mouseY >= 407 && mouseY <= 467)
 				{
 					menu_running = false;
 					check = 4;
+					menu_bg.free();
 				}
 
 			}

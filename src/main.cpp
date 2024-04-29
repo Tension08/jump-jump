@@ -68,8 +68,8 @@ bool LoadBackground ()
 
 std::vector<ThreatsObject*> MakeThreadList(){
     std::vector<ThreatsObject*> list_threats;
-    ThreatsObject* threats_static = new ThreatsObject[20];
-    for(int i=0; i<20; i++){
+    for(int i=0; i<50; i++){
+        ThreatsObject* p_threat = new ThreatsObject();
         ThreatsObject* p_threat = (threats_static + i);
             if(p_threat != NULL){
                 p_threat ->LoadImg("value/static.png",gscreen);
@@ -83,9 +83,8 @@ std::vector<ThreatsObject*> MakeThreadList(){
             list_threats.push_back(p_threat);
          }
     }
-    ThreatsObject* threats_attack = new ThreatsObject[20];
-    for(int i=0; i < 20; i++){
-        ThreatsObject* p_threat = ( threats_attack + i );
+    for(int i=0; i < 1; i++){
+        ThreatsObject* p_threat = new ThreatsObject();
         if(p_threat != NULL){
             p_threat -> LoadImg("value/attack.png", gscreen);
             p_threat -> set_clips();
@@ -93,10 +92,11 @@ std::vector<ThreatsObject*> MakeThreadList(){
             p_threat ->set_y_pos(WINDOW_HEIGHT - 98 - p_threat->get_height_frame());
             p_threat ->set_type_move(ThreatsObject::ATTACK_THREAT);
             p_threat ->set_input_left(0);
-
+            for (int i = 0; i < 100; i++)
+            {
             BulletObject* p_bullet = new BulletObject();
             p_threat->InitBullet(p_bullet, gscreen);
-
+            }
             list_threats.push_back(p_threat);
         }
     }
@@ -136,7 +136,7 @@ int main (int argc, char* args[])
     if (LoadButton() == false) return -1;
 
     TextObject mark_game;
-    mark_game.SetColor(TextObject::BLACK_TEXT);
+    mark_game.SetColor(TextObject::RED_TEXT);
 
     int offset = 0;// for background
 
@@ -250,15 +250,20 @@ int main (int argc, char* args[])
                         if (character_name == "value/musketer-run.png")
                         {
                             player_power.Decrease();
+                            p_threat -> free();
+                            p_threat = NULL;
                         }
                         else if (character_name == "value/enchatre.png")
                         {
                             player_power.Decrease();
                             player_power.Decrease();
+                            p_threat -> free();
+                            p_threat = NULL;
                         }
                     }
                     if (check <= 0){
                         p_threat -> free();
+                        
                         p_threat = NULL;
                     }
                 }
@@ -302,7 +307,7 @@ int main (int argc, char* args[])
 
             std::string str_mark = "Far: ";
             Uint32 time_val = SDL_GetTicks()/1000;
-            str_mark += std::to_string(time_val * PLAYER_SPEED);
+            str_mark += std::to_string((time_val - remaindertime_menu) * PLAYER_SPEED);
             mark_game.SetText(str_mark);
             mark_game.LoadFromRenderText(font, gscreen);
             mark_game.RenderText(gscreen, WINDOW_WIDTH/2,0);
@@ -325,7 +330,7 @@ int main (int argc, char* args[])
                 character.free();
                 TextObject text_game_over;
                 text_game_over.SetText("GAME OVER");
-                text_game_over.SetColor(TextObject::RED_TEXT);
+                text_game_over.SetColor(TextObject::WHITE_TEXT);
                 text_game_over.LoadFromRenderText(font, gscreen);
                 text_game_over.RenderText(gscreen, WINDOW_WIDTH/2 - 100, WINDOW_HEIGHT/2 - 50);
                 mark_game.RenderText(gscreen, WINDOW_WIDTH/2, WINDOW_HEIGHT/2);
@@ -339,6 +344,7 @@ int main (int argc, char* args[])
             ThreatsObject* p_threat = threats_list.at(i);
             if(p_threat != NULL){
                 p_threat->free();
+                delete p_threat;
                 p_threat = NULL;
             }
         }
