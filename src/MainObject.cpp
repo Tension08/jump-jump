@@ -5,17 +5,19 @@ MainObject :: MainObject()
 {   
     HP = HP_MAX;
     frame = 0;
-    x_pos = WINDOW_WIDTH/3; 
-    y_pos = 0;
+    x_pos = 0; 
+    y_pos = WINDOW_HEIGHT - 170;
     x_val = 0;
     y_val = 0;
     width_frame = 0;
     height_frame = 0;
     input_type.jump = 0;
-    input_type.right = 0;
+    input_type.right = 1;
     input_type.left = 0;
+    input_type.down = 0;
     status = -1;
     on_ground = false;
+    Uint32 last_bullet_time_ = 0;
 }
 MainObject :: ~MainObject()
 {
@@ -75,21 +77,24 @@ void MainObject :: HandleInputAction(SDL_Event event, SDL_Renderer* screen)
                 status = JUMP;
                 input_type.jump = 1;
                 break;
-            // case SDLK_RIGHT:
-            //     status = RUN_RIGHT;
-            //     input_type.right = 1;
-            //     input_type.left = 0;
-            //     break;
-            // case SDLK_LEFT:
-            //     status = RUN_LEFT;
-            //     input_type.left = 1;
-            //     input_type.right = 0;    
+             /*case SDLK_m:
+                 status = RUN_RIGHT;
+                 input_type.right = 1;
+                 input_type.left = 0;
+                 break;
+             case SDLK_LEFT:
+                 status = RUN_LEFT;
+                 input_type.left = 1;
+                 input_type.right = 0;  */
+            case SDLK_DOWN:
+                input_type.down = 1;
+                break;
             default : break;
         }
     }
     else if(event.type == SDL_KEYUP)
     {
-          switch(event.key.keysym.sym)
+          /*switch(event.key.keysym.sym)
           {
             case SDLK_RIGHT:
             {
@@ -101,30 +106,34 @@ void MainObject :: HandleInputAction(SDL_Event event, SDL_Renderer* screen)
                 input_type.left = 0;
             }
             break;
-        }
+        }*/
     }
     else if(event.type == SDL_MOUSEBUTTONDOWN){
-        
+        Uint32 current_time = SDL_GetTicks();
         if(event.button.button == SDL_BUTTON_LEFT){
-            BulletObject* p_bullet = new BulletObject();
-            p_bullet->set_bullet_type(BulletObject::MAGIC);
-            p_bullet->LoadImgBullet(screen);
+            Uint32 time_since_last_bullet = current_time - last_bullet_time_;
+            if (time_since_last_bullet >= 5000)
+            {
+                BulletObject* p_bullet = new BulletObject();
+                p_bullet->set_bullet_type(BulletObject::MAGIC);
+                p_bullet->LoadImgBullet(screen);
 
-            if(status == RUN_LEFT){
-                p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
-                p_bullet->SetRect(this->rect.x + 10 , rect.y + height_frame* 0.25);
+                if (status == RUN_LEFT) {
+                    p_bullet->set_bullet_dir(BulletObject::DIR_LEFT);
+                    p_bullet->SetRect(this->rect.x + 10, rect.y + height_frame * 0.25);
+                }
+                else {
+                    p_bullet->set_bullet_dir(BulletObject::DIR_RIGHT);
+                    p_bullet->SetRect(this->rect.x + width_frame - 20, rect.y + height_frame * 0.25);
+                }
+                p_bullet->set_x_val(3);
+                p_bullet->set_y_val(3);
+                p_bullet->set_is_move(true);
+
+                p_bullet_list_.push_back(p_bullet);
+
+                last_bullet_time_ = current_time;
             }
-            else{
-                 p_bullet->set_bullet_dir(BulletObject::DIR_RIGHT);
-                 p_bullet->SetRect(this->rect.x + width_frame - 20, rect.y + height_frame* 0.25);
-            }
-            p_bullet->set_x_val(3);
-            p_bullet->set_y_val(3);
-            p_bullet->set_is_move(true);
-
-            p_bullet_list_.push_back(p_bullet);
-
-            SDL_Delay(100);
         }
     }
 
@@ -168,22 +177,23 @@ void MainObject :: DoPlayer(Map& map_data)
             y_val = MAX_FALL_SPEED;
         }
 
-    // if(input_type.left == 1){
-    //         x_val -= PLAYER_SPEED;
-    //     }
+     /*if(input_type.left == 1){
+             x_val -= PLAYER_SPEED;
+         }*/
 
-    // else if(input_type.right == 1){
-    //         x_val += PLAYER_SPEED;
-    //     }
-    if(input_type.jump == 1)
-    {
-        if(on_ground ==  true)
+          if(input_type.right == 1){
+                x_val += PLAYER_SPEED;
+                if (x_pos = WINDOW_WIDTH / 3) input_type.right == 0;
+          }
+        if(input_type.jump == 1)
         {
-            y_val = - PLAYER_JUMP_VAL;
+            if(on_ground ==  true)
+            {
+                y_val = - PLAYER_JUMP_VAL;
+            }
+            on_ground = false;
+            input_type.jump = 0;
         }
-        on_ground = false;
-        input_type.jump = 0;
-    }
 
     CheckToMap(map_data);
     //CenterEntityOnMap(map_data);
@@ -260,10 +270,10 @@ void MainObject :: CheckToMap(Map& map_data)
     {
         x_pos = 0;
     } 
-    else if (x_pos + width_frame  > map_data.max_x)
+    /*else if (x_pos + width_frame  > map_data.max_x)
     {
         x_pos = map_data.max_x - width_frame - 1;
-    }
+    }*/
 }
 
  SDL_Rect MainObject::GetRectFrame(){
@@ -276,7 +286,7 @@ void MainObject :: CheckToMap(Map& map_data)
  }
 
  void MainObject::RemoveBullet(const int& idx){
-    int size = p_bullet_list_.size();
+    auto size = p_bullet_list_.size();
     if(size > 0 && idx < size){
         BulletObject* p_bullet = p_bullet_list_.at(idx);
         p_bullet_list_.erase(p_bullet_list_.begin() + idx);

@@ -1,0 +1,135 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Project1.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  bonusCommon.cpp
+  bullet.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'bonusCommon.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'bonusCommon.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'bullet.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'bullet.cpp')
+  
+  CommonFunc.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'CommonFunc.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'CommonFunc.cpp')
+  
+  ImpTimer.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'ImpTimer.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'ImpTimer.cpp')
+  
+  main.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'main.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(75,23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(82,46): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(83,52): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(99,51): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(100,88): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(222,32): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\main.cpp(225,39): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  MainObject.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'MainObject.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'MainObject.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(60,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(61,14): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(123,65): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(123,52): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(127,79): warning C4244: 'argument': conversion from 'double' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(127,66): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(169,18): warning C4305: '+=': truncation from 'double' to 'float'
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(186,64): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(204,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(207,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(211,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(212,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(214,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(215,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(223,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(232,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(239,15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(240,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(242,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(243,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(251,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\MainObject.cpp(261,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Map.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'Map.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'Map.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\Map.cpp(21,65): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\Map.cpp(28,30): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\Map.cpp(56,98): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\Map.cpp(56,57): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  menu.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'menu.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'menu.cpp')
+  
+  showBar.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'showBar.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'showBar.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\showBar.cpp(25,64): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\showBar.cpp(25,41): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  TextObject.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'TextObject.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'TextObject.cpp')
+  
+  ThreatsObject.cpp
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,60): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'ThreatsObject.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\CommonFunc.h(34,72): warning C4244: '=': conversion from 'const float' to 'int', possible loss of data
+  (compiling source file 'ThreatsObject.cpp')
+  
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(53,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(54,18): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(87,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(90,12): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(94,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(95,43): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(97,17): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(98,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(106,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(115,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(122,15): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(123,29): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(125,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(126,45): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(134,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(144,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(169,48): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(169,37): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(194,54): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+C:\Users\notebook\source\repos\Project1\Project1\ThreatsObject.cpp(194,42): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  Generating Code...
+  Project1.vcxproj -> C:\Users\notebook\source\repos\Project1\x64\Debug\jump jump.exe

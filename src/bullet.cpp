@@ -32,7 +32,7 @@ bool BulletObject::LoadImgBullet(SDL_Renderer* des){
     if (bullet_type_ == ROCK){
         ret = LoadImg("value/bullet.png", des);
     }
-    else if(bullet_type_ == MAGIC){
+    if(bullet_type_ == MAGIC){
         ret = LoadImg("value/magic.png", des);
     }
     return ret;

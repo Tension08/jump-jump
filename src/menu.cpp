@@ -9,7 +9,7 @@ int SDLCommonFunc::showMenu(SDL_Renderer* screen, int& remaindertime_menu)
     SDL_RenderPresent(screen);
 
 	bool menu_running = true;
-    int check;
+    int check = 0;
 
 	while (menu_running)
 	{

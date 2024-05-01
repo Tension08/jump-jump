@@ -9,7 +9,6 @@ public:
     ~GameMap() { ; }
 
     void LoadMap(const char* name);
-    void LoadTiles(SDL_Renderer* screen);
     void DrawMap(SDL_Renderer* screen);
     Map getMap() const {return map;};
     void SetMap(Map& map_data){

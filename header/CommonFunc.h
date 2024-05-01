@@ -1,11 +1,25 @@
 //from phattrienphanmem 123-az
 #pragma once
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <set>
+//for vs code
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include <SDL2/SDL_mixer.h>
 #include <SDL2/SDL_ttf.h>
+
+//for visual studio
+//#include <SDL.h>
+//#include <SDL_image.h>
+//#include <SDL_ttf.h>
+
+//for xcode
+//#include <SDL2/SDL.h>
+//#include <SDL2_imagw/SDL_image.h>
+//#include <SDL2_ttf/SDL_ttf.h>
 
 static SDL_Window* gwindow = NULL;
 static SDL_Renderer* gscreen = NULL;
@@ -20,15 +34,15 @@ const int CHAR_FRAMES = 8;
 
 #define MAX_TILES 3
 #define TILE_SIZE 48
-#define MAX_MAP_X 100
+#define MAX_MAP_X 20
 #define MAX_MAP_Y 10
 
 class BaseObject 
 {
     public: 
         BaseObject();
-        ~BaseObject();
-        void SetRect(const int& x, const int& y) {rect.x = x, rect.y = y;}
+        virtual ~BaseObject();
+    void SetRect(const float& x, const float& y) {rect.x = x; rect.y = y;}
         SDL_Rect GetRect() {return rect;}
         SDL_Texture* GetObject() const {return object;}
         int GetWidth() const {return rect.w;}
@@ -64,12 +78,12 @@ struct Map
 struct Input
 {
     int jump;
-    int fire;
-    int slash;
+    //int slash;
     int right;
     int left;
-    int die;
-    int hurt;
+    //int die;
+    //int hurt;
+    int down;
 };
 
 namespace SDLCommonFunc{
@@ -77,4 +91,5 @@ namespace SDLCommonFunc{
     int showMenu(SDL_Renderer* screen, int& remaindertime_menu);
     void afterPause(SDL_Event& event, SDL_Renderer* screen, int& menuN, bool& run);
     int showCharacterMenu(SDL_Renderer* screen);
+    void showInformation(SDL_Renderer* screen);
 }

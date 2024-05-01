@@ -156,6 +156,7 @@ int SDLCommonFunc::showCharacterMenu(SDL_Renderer* screen)
             check = 1;
             ret = false;
             break;
+
           }
           case SDLK_2:
           {
@@ -169,7 +170,7 @@ int SDLCommonFunc::showCharacterMenu(SDL_Renderer* screen)
       {
         int x,y;
         SDL_GetMouseState(&x, &y);
-        if(x >= 409 && x <= 509 && y >=545 && y <= 581)
+        if(x >= 420 && x <= 513 && y >=80 && y <= 118)
         {
           ret = false;
           check = 3;
@@ -184,3 +185,32 @@ int SDLCommonFunc::showCharacterMenu(SDL_Renderer* screen)
   return check;
 }
 
+void SDLCommonFunc::showInformation(SDL_Renderer* screen)
+{
+    BaseObject info;
+    info.LoadImg("value/information.png", screen);
+    info.Render(screen, NULL);
+    SDL_RenderPresent(screen);
+    bool ret = true;
+    SDL_Event e;
+    while (ret)
+    {
+        while (SDL_PollEvent(&e))
+        {
+            if (e.type == SDL_QUIT)
+            {
+                ret = false;
+                break;
+            }
+            if (e.type == SDL_KEYDOWN)
+            {
+                ret = false;
+                break;
+            }
+        }
+    }
+    if (!ret)
+    {
+        info.free();
+    }
+}

@@ -18,12 +18,9 @@ class MainObject : public BaseObject
         enum ACTION
         {
             JUMP = 1,
-            FIRE = 2,
-            SLASH = 3,
-            RUN_RIGHT = 4,
-            RUN_LEFT  = 5,
-            DIE = 6,
-            HURT = 7,
+            RUN_RIGHT = 2,
+            RUN_LEFT  = 3,
+            DOWN = 4
         };
 
         virtual bool LoadImg(std :: string path, SDL_Renderer* screen);
@@ -60,4 +57,6 @@ class MainObject : public BaseObject
         int HP;
 
         std::vector<BulletObject*> p_bullet_list_;
+
+        Uint32 last_bullet_time_;
 };

@@ -2,18 +2,17 @@
 #include "CommonFunc.h"
 #include "bullet.h"
 
-#define THREAT_FRAME_NUM 4
-#define THREAT_SPEED 2
+#define THREAT_FRAME_NUM 6
+#define THREAT_SPEED 4
 
 class ThreatsObject : public BaseObject{
     public:
         ThreatsObject();
-        virtual ~ThreatsObject();
+        ~ThreatsObject();
 
         enum TypeMove{
             STATIC_THREAT = 0,
-            ATTACK_THREAT = 1,
-            FALL = 2,
+            ATTACK_THREAT = 1
         };
 
         void set_x_val(const float& xVal) { 
@@ -67,6 +66,8 @@ class ThreatsObject : public BaseObject{
         void MakeBullet(SDL_Renderer* screen, const int& x_limit, const int& y_limit);
         void RemoveBullet(const int& idx);
         
+        Uint32 get_last_bullet() { return last_bullet; };
+        void set_last_bullet(Uint32 l_b) { last_bullet = l_b; };
     private:
         float x_val;
         float y_val;
@@ -84,6 +85,8 @@ class ThreatsObject : public BaseObject{
 
         int type_move_;
         Input input_type;
+
+        Uint32 last_bullet = 0;
 
         std::vector<BulletObject*>bullet_list_;
 };
