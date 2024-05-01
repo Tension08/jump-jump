@@ -29,6 +29,8 @@ Game Jump Jump là thể loại game endless run, chạy, vượt qua chướng 
   * Nếu dùng Visual Studio : chạy bình thường lưu ý cần thêm các file .dll có sẵn
   * Nếu dùng Xcode : Bạn cần thêm các file .framework có sẵn trong code vào phẩn general trong project củ mình trước khi build.
 ### b. Không bao gồm code
+* Tải về từ ![release]](https://github.com/Tension08/jump-jump/releases/tag/jump-02) này có một file .app của game chỉ cần click vào là chạy được(chỉ áp dụng với MAC và windows có apple application support)
+* Tải về từ ![release](https://github.com/Tension08/jump-jump/releases/tag/jump-01) này có một file .exe (cái này chỉ cho windows)
 ## 1.Mô tả game
 ### 1.1 Bắt đầu game 
 * Nhấn vào nút "play" để bắt đầu trò chơi:
